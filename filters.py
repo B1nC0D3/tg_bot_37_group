@@ -58,9 +58,14 @@ class InverseFilter(Filter):
         return tuple(result)
 
 
+class AnotherDoNothingFilter(Filter):
+    def apply_to_pixel(self, r: int, g: int, b: int) -> tuple[int, int, int]:
+        return r, g, b
+
 FILTERS = {
     "Красный фильтр": RedFilter(),
     "Зеленый фильтр": GreenFilter(),
     "Синий фильтр": BlueFilter(),
     "Инверсия": InverseFilter(),
+    'Еще один крутой фильтр': AnotherDoNothingFilter(),
 }
