@@ -24,7 +24,7 @@ if not os.path.exists(images_folder):
 def handle_start(message: Message):
     bot.send_message(
         message.chat.id,
-        "Я бот, который накладывает фильтры на картинки. Пожалуйста, загрузите изображение.",
+        "Привет! Я бот, который накладывает фильтры на картинки. Пожалуйста, загрузите изображение.",
     )
 
 
